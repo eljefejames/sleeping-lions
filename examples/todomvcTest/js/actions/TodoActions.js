@@ -8,7 +8,9 @@ class TodoActions {
       'toggleComplete',
       'toggleCompleteAll',
       'destroy',
-      'destroyCompleted'
+      'destroyCompleted',
+      'doRandom',
+      'deleteLast'
     )
   }
 }

@@ -26,7 +26,7 @@ var Footer = React.createClass({
     var allTodos = this.props.allTodos;
     var total = Object.keys(allTodos).length;
 
-    if (total === 0) {
+    if (total === -1) {
       return null;
     }
 
@@ -52,6 +52,27 @@ var Footer = React.createClass({
         </button>;
     }
 
+    /* adding some strange buttons*/
+
+  var addRandomButton;
+      // if (completed) {
+        addRandomButton =
+          <button
+            id="add-random"
+            onClick={this._onAddRandomClick}>
+            Add things ({completed})
+          </button>;
+      // }
+
+  var deleteLastButton;
+          // if (completed) {
+            deleteLastButton =
+              <button
+                id="delete-last"
+                onClick={this._onDeleteLastClick}>
+                delete last ({completed})
+              </button>;
+
   	return (
       <footer id="footer">
         <span id="todo-count">
@@ -60,6 +81,8 @@ var Footer = React.createClass({
           </strong>
           {itemsLeftPhrase}
         </span>
+          {addRandomButton}
+          {deleteLastButton}
         {clearCompletedButton}
       </footer>
     );
@@ -70,6 +93,15 @@ var Footer = React.createClass({
    */
   _onClearCompletedClick: function() {
     TodoActions.destroyCompleted();
+  }
+,
+
+  _onAddRandomClick: function() {
+    TodoActions.doRandom();
+  },
+
+  _onDeleteLastClick: function() {
+    TodoActions.deleteLast();
   }
 
 });

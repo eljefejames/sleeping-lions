@@ -68,6 +68,49 @@ var todoStore = alt.createStore(class TodoStore {
     }
   }
 
+  onDoRandom() {
+    // for (var id in this.todos) {
+    //     this.todos[id] = "URGENT"
+    //   }
+    console.log("This is flowing, brah");
+
+    var text = "urgent";
+    if (text === '') {
+      return false
+    }
+    // hand waving of course.
+    var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36)
+    this.todos[id] = {
+      id: id,
+      complete: false,
+      text: text
+    }
+  }
+
+
+    onDeleteLast() {
+
+      console.log("This is flowing, brah");
+/* this is code to wipe the whole object */
+      // for (var id in this.todos) {
+      //     this.onDestroy(id)
+      //   }
+      var smallArray = [];
+      for (var id in this.todos) {
+          smallArray.push(id);
+          var len  = smallArray.length;
+          console.log(smallArray[len]);
+
+
+        }
+
+      }
+
+
+
+
+
+
   static areAllComplete() {
     var { todos } = this.getState()
     for (var id in todos) {
