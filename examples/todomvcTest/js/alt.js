@@ -1,5 +1,5 @@
-var Alt = require('../../../');
-var chromeDebug = require('../../../utils/chromeDebug');
+var Alt = require('../node_modules/alt');
+var chromeDebug = require('../node_modules/alt/utils/chromeDebug');
 var alt = new Alt();
 chromeDebug(alt);
 
