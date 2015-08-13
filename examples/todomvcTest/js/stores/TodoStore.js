@@ -90,22 +90,11 @@ var todoStore = alt.createStore(class TodoStore {
 
     onDeleteLast() {
 
-      console.log("This is flowing, brah");
-/* this is code to wipe the whole object */
-      // for (var id in this.todos) {
-      //     this.onDestroy(id)
-      //   }
-      var smallArray = [];
-      for (var id in this.todos) {
-          smallArray.push(id);
-          var len  = smallArray.length;
-          console.log(smallArray[len]);
+    console.log("This is flowing, brosef");
+     var output = todoStore.getState();
+     console.log(output);
 
-
-        }
-
-      }
-
+}
 
 
 
