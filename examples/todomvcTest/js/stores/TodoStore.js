@@ -1,6 +1,6 @@
-var alt = require('../alt')
-var merge = require('object-assign')
-
+var alt = require('../alt');
+var merge = require('object-assign');
+import connectToStores from 'alt/utils/connectToStores';
 var TodoActions = require('../actions/TodoActions')
 
 var todoStore = alt.createStore(class TodoStore {
@@ -93,8 +93,11 @@ var todoStore = alt.createStore(class TodoStore {
     console.log("This is flowing, brosef");
      var output = todoStore.getState();
      console.log(output);
+console.log(output.todos[0]);
+console.log(todoStore.props);
+console.log(todoStore.props.allTodos);
 
-}
+};
 
 
 
