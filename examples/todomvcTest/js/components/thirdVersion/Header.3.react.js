@@ -21,7 +21,7 @@ var Header = React.createClass({
   render: function() {
     return (
       <header id="header">
-        <h1>Tasks </h1>
+        <h1>Questions? </h1>
         <TodoTextInput
           id="new-todo"
           placeholder="Give me tasks?"
