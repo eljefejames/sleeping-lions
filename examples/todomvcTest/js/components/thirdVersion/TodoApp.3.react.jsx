@@ -14,20 +14,20 @@
  * the TodoStore and passes the new data to its children.
  */
 
-var Footer = require('./Footer.react');
-var Header = require('./Header.react');
-var MainSection = require('./MainSection.react');
+var Footer = require('./Footer.3.react');
+var Header = require('./Header.3.react');
+var MainSection = require('./MainSection.3.react');
 var React = require('react');
-var TodoStore = require('../stores/TodoStore');
-var FluxyMixin = require('../../mixins/FluxyMixin');
+var TodoStore3 = require('../../stores/TodoStore3');
+var FluxyMixin = require('../../../mixins/FluxyMixin');
 
 /**
  * Retrieve the current TODO data from the TodoStore
  */
 function getTodoState() {
   return {
-    allTodos: TodoStore.getState().todos,
-    areAllComplete: TodoStore.areAllComplete()
+    allTodos: TodoStore3.getState().todos,
+    areAllComplete: TodoStore3.areAllComplete()
   };
 }
 
@@ -36,7 +36,7 @@ var TodoApp = React.createClass({
 
   statics: {
     storeListeners: {
-      _onChange: TodoStore
+      _onChange: TodoStore3
     }
   },
 

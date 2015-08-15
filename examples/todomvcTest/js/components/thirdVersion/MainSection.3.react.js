@@ -11,8 +11,8 @@
 
 var React = require('react');
 var ReactPropTypes = React.PropTypes;
-var TodoActions = require('../actions/TodoActions');
-var TodoItem = require('./TodoItem.react');
+var TodoActions = require('../../actions/TodoActions3');
+var TodoItem = require('./TodoItem.3.react');
 
 var MainSection = React.createClass({
 
