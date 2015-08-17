@@ -11,7 +11,7 @@
 
 var React = require('react');
 var ReactPropTypes = React.PropTypes;
-var TodoActions = require('../../actions/TodoActions');
+var TodoActions = require('../../actions/TodoActions2');
 
 var Footer = React.createClass({
 
@@ -64,13 +64,13 @@ var Footer = React.createClass({
           </button>;
       // }
 
-  var deleteLastButton;
-          // if (completed) {
-            deleteLastButton =
+  var pushToDoneButton;
+
+            pushToDoneButton =
               <button
-                id="delete-last"
-                onClick={this._onDeleteLastClick}>
-                delete last ({completed})
+                id="pushToDoneButton"
+                onClick={this._onPushToDoneClick}>
+                Push to Done ({completed})
               </button>;
 
   	return (
@@ -82,7 +82,7 @@ var Footer = React.createClass({
           {itemsLeftPhrase}
         </span>
           {addRandomButton}
-          {deleteLastButton}
+          {pushToDoneButton}
         {clearCompletedButton}
       </footer>
     );
@@ -102,6 +102,10 @@ var Footer = React.createClass({
 
   _onDeleteLastClick: function() {
     TodoActions.deleteLast();
+  },
+
+  _onPushToDoneClick: function() {
+    TodoActions.pushToDone();
   }
 
 });

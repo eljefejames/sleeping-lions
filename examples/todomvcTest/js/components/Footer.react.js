@@ -70,7 +70,7 @@ var Footer = React.createClass({
               <button
                 id="delete-last"
                 onClick={this._onDeleteLastClick}>
-                delete last ({completed})
+                delete stuff ({completed})
               </button>;
 
   	return (

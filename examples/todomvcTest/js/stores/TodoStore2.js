@@ -94,6 +94,18 @@ var todoStore = alt.createStore(class TodoStore {
      var output = todoStore.getState();
 
 
+}
+
+    onPushToDone() {
+
+    console.log("Yo Dre this is doing something");
+    for (var id in this.todos) {
+      if (this.todos[id].complete) {
+        this.onDestroy(id)
+      }
+    }
+
+
 };
 
 
