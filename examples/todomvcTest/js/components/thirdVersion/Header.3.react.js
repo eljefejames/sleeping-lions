@@ -21,10 +21,10 @@ var Header = React.createClass({
   render: function() {
     return (
       <header id="header">
-        <h1>Questions? </h1>
+        <h1>Ask </h1>
         <TodoTextInput
           id="new-todo"
-          placeholder="Give me tasks?"
+          placeholder="Any Questions?"
           onSave={this._onSave}
         />
       </header>
