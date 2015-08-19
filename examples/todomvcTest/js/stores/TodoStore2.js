@@ -77,10 +77,10 @@ var x = "yes"
     return x;
   }
 
-
-    onPushToDone() {
+  onPushToDone() {
 
       console.log("Yo Dre this is doing something");
+      console.log("this doing ")
       var text = "test add";
       if (text === '') {
         return false
@@ -93,6 +93,7 @@ var x = "yes"
         text: text
       }
     }
+
 
 
   static areAllComplete() {

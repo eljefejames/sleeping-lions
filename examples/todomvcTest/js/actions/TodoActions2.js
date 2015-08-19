@@ -11,7 +11,8 @@ class TodoActions {
       'destroyCompleted',
       'doRandom',
       'deleteLast',
-      'pushToDone'
+      'pushToDone',
+      'listOfDone'
     )
   }
 }

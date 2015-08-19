@@ -97,11 +97,10 @@ var Footer = React.createClass({
 
 
   _onPushToDoneClick: function() {
-
-  TodoActions2.destroyCompleted();
-//TOdo figure out how to make the callback function work properly
-    TodoActions.doRandom();
-
+TodoActions2.listOfDone();
+TodoActions2.destroyCompleted();
+TodoActions.doRandom();
+TodoActions2.pushToDone();
 
   }
 
