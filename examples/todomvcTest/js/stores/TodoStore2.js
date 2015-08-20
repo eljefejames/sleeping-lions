@@ -70,9 +70,9 @@ var todoStore = alt.createStore(class TodoStore {
 var quickArray = [];
 for (var id in this.todos) {
 quickArray.push(this.todos[id].text)
-
 }
 console.log(quickArray)
+TodoActions.create(quickArray[0])
 var x = "yes"
     return x;
   }
@@ -80,7 +80,6 @@ var x = "yes"
   onPushToDone() {
 
       console.log("Yo Dre this is doing something");
-      console.log("this doing ")
       var text = "test add";
       if (text === '') {
         return false
