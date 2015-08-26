@@ -11,7 +11,7 @@
 
 var React = require('react');
 var ReactPropTypes = React.PropTypes;
-var TodoActions = require('../actions/TodoActions');
+var TodoActions = require('../../actions/TodoActions3');
 
 var Footer = React.createClass({
 
@@ -70,7 +70,7 @@ var Footer = React.createClass({
               <button
                 id="delete-last"
                 onClick={this._onDeleteLastClick}>
-                delete stuff ({completed})
+                delete last ({completed})
               </button>;
 
   	return (

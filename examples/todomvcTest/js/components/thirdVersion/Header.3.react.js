@@ -10,8 +10,8 @@
  */
 
 var React = require('react');
-var TodoActions = require('../actions/TodoActions');
-var TodoTextInput = require('./TodoTextInput.react');
+var TodoActions = require('../../actions/TodoActions3');
+var TodoTextInput = require('./TodoTextInput.3.react');
 
 var Header = React.createClass({
 
@@ -21,7 +21,7 @@ var Header = React.createClass({
   render: function() {
     return (
       <header id="header">
-        <h1>Done </h1>
+        <h1>Ask </h1>
         <TodoTextInput
           id="new-todo"
           placeholder="Any Questions?"

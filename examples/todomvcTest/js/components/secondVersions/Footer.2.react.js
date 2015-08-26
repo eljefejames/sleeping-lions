@@ -11,7 +11,8 @@
 
 var React = require('react');
 var ReactPropTypes = React.PropTypes;
-var TodoActions = require('../actions/TodoActions');
+var TodoActions2 = require('../../actions/TodoActions2');
+var TodoActions = require('../../actions/TodoActions');
 
 var Footer = React.createClass({
 
@@ -43,14 +44,14 @@ var Footer = React.createClass({
 
     // Undefined and thus not rendered if no completed items are left.
     var clearCompletedButton;
-    if (completed) {
+
       clearCompletedButton =
         <button
           id="clear-completed"
           onClick={this._onClearCompletedClick}>
           Clear completed ({completed})
         </button>;
-    }
+
 
     /* adding some strange buttons*/
 
@@ -64,13 +65,13 @@ var Footer = React.createClass({
           </button>;
       // }
 
-  var deleteLastButton;
-          // if (completed) {
-            deleteLastButton =
+  var pushToDoneButton;
+
+            pushToDoneButton =
               <button
-                id="delete-last"
-                onClick={this._onDeleteLastClick}>
-                delete stuff ({completed})
+                id="pushToDoneButton"
+                onClick={this._onPushToDoneClick}>
+                Push to Done ({completed})
               </button>;
 
   	return (
@@ -81,9 +82,7 @@ var Footer = React.createClass({
           </strong>
           {itemsLeftPhrase}
         </span>
-          {addRandomButton}
-          {deleteLastButton}
-        {clearCompletedButton}
+          {pushToDoneButton}
       </footer>
     );
   },
@@ -92,16 +91,15 @@ var Footer = React.createClass({
    * Event handler to delete all completed TODOs
    */
   _onClearCompletedClick: function() {
-    TodoActions.destroyCompleted();
+    TodoActions2.destroyCompleted();
   }
 ,
 
-  _onAddRandomClick: function() {
-    TodoActions.doRandom();
-  },
 
-  _onDeleteLastClick: function() {
-    TodoActions.deleteLast();
+  _onPushToDoneClick: function() {
+TodoActions2.destroyCompleted();
+TodoActions2.pushToDone();
+
   }
 
 });

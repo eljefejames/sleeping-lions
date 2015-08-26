@@ -1,19 +1,54 @@
-<!doctype html>
+	<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Alt - TodoMVC</title>
 		<link rel="stylesheet" href="todomvc-common/base.css">
 		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 	</head>
 	<body>
-		<section id="todoapp"></section>
-		<footer id="info">
-			<p>Double-click to edit a todo</p>
-			<p>Alt example created by <a href="http://github.com/goatslacker">Josh Perez</a></p>
-      <p>View components created TEST<a href="http://facebook.com/bill.fisher.771">Bill Fisher</a></p>
-			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
-		</footer>
+
+		<!-- <div class="container-fluid">
+		  <h1>Hello World!</h1>
+		  <p>Resize the browser window to see the effect.</p>
+		  <div class="row">
+		    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+		    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+		    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+		  </div>
+		</div> -->
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<section id="todoapp"></section>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<section id="todoapp2"></section>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<section id="todoapp3"></section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 		<script src="bundle.js"></script>
 	</body>
 </html>

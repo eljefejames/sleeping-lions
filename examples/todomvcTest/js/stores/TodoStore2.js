@@ -1,11 +1,12 @@
 var alt = require('../alt');
 var merge = require('object-assign');
 import connectToStores from 'alt/utils/connectToStores';
+var TodoActions2 = require('../actions/TodoActions2')
 var TodoActions = require('../actions/TodoActions')
 
 var todoStore = alt.createStore(class TodoStore {
   constructor() {
-    this.bindActions(TodoActions)
+    this.bindActions(TodoActions2)
 
     this.todos = {}
   }
@@ -61,42 +62,36 @@ var todoStore = alt.createStore(class TodoStore {
   }
 
   onDestroyCompleted() {
-    for (var id in this.todos) {
-      if (this.todos[id].complete) {
-        this.onDestroy(id)
+    // for (var id in this.todos) {
+    //   if (this.todos[id].complete) {
+    //     this.onDestroy(id)
+    //   }
+    // }
+var quickArray = [];
+for (var id in this.todos) {
+quickArray.push(this.todos[id].text)
+}
+console.log(quickArray)
+TodoActions.create(quickArray[0])
+var x = "yes"
+    return x;
+  }
+
+  onPushToDone() {
+
+      console.log("Yo Dre this is doing something");
+      var text = "test add";
+      if (text === '') {
+        return false
+      }
+      // hand waving of course.
+      var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36)
+      this.todos[id] = {
+        id: id,
+        complete: false,
+        text: text
       }
     }
-  }
-
-  onDoRandom() {
-    // for (var id in this.todos) {
-    //     this.todos[id] = "URGENT"
-    //   }
-    console.log("This is flowing, brah");
-
-    var text = "urgent";
-    if (text === '') {
-      return false
-    }
-    // hand waving of course.
-    var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36)
-    this.todos[id] = {
-      id: id,
-      complete: false,
-      text: text
-    }
-  }
-
-
-    onDeleteLast() {
-
-    console.log("This is flowing, brosef");
-     var output = todoStore.getState();
-     
-
-};
-
-
 
 
 
