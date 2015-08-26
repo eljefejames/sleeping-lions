@@ -44,7 +44,7 @@ module.exports = React.createClass({
         <h1>AltManager - Weather Tabs App</h1>
         <div className="content">
           <p>
-            This is an example React/Flux/Alt app that shows the use of AltManager, a
+            Testing.This is an example React/Flux/Alt app that shows the use of AltManager, a
             utility class for Alt.js. AltManager allows for multiple alt instances which is
             necessary to build apps that encapsulates a mini app inside of a large app. In
             this example we have a simple weather searcher. Each search you make will
