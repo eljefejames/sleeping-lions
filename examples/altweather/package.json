@@ -15,5 +15,9 @@
     "build": "browserify js/app.js -t babelify --outfile js/bundle.js",
     "clean": "rm -R ./node_modules; npm install; npm run build"
   },
-  "author": "Alvin Sng <admin@alvinsng.com>"
+  "author": "Alvin Sng <admin@alvinsng.com>",
+  "devDependencies": {
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.12.0"
+  }
 }
